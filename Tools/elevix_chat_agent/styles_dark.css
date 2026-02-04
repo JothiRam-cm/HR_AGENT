@@ -1,0 +1,103 @@
+/* Main Background */
+.stApp {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #000000;
+    border-right: 1px solid #1f1f1f;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #00ff41 !important; /* Metal Green */
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs */
+.stTextInput > div > div > input {
+    background-color: #1a1a1a;
+    color: #00ff41;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+.stTextInput > div > div > input:focus {
+    border-color: #00ff41;
+    box-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+}
+
+/* Buttons */
+.stButton > button {
+    background-color: #1a1a1a;
+    color: #00ff41;
+    border: 1px solid #00ff41;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+.stButton > button:hover {
+    background-color: #00ff41;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    border-color: #00ff41;
+}
+
+/* Chat Bubbles */
+[data-testid="stChatMessage"] {
+    background-color: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+[data-testid="stChatMessage"][data-testid="user"] {
+    background-color: #0a1f0a; /* Very dark green hint */
+    border-color: #0f3d0f;
+}
+
+/* Assistant Bubble Specifics */
+[data-testid="stChatMessage"] .stMarkdown {
+    color: #dcdcdc;
+}
+
+/* Source Box */
+.source-box {
+    background-color: #0a0a0a;
+    border-left: 3px solid #00ff41;
+    color: #aaa;
+    padding: 10px;
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    background-color: #111;
+    color: #00ff41 !important;
+    border: 1px solid #222;
+}
+
+/* Intent Tag */
+.intent-tag {
+    color: #555;
+    font-size: 0.75rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+/* Spinner */
+.stSpinner > div {
+    border-top-color: #00ff41 !important;
+}
+
+/* Links */
+a {
+    color: #00ff41 !important;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,197 @@
+/* Office PowerPoint Theme - Custom CSS for Elvix */
+
+:root {
+    /* Office Theme Colors */
+    --office-dark-1: #000000;
+    --office-light-1: #FFFFFF;
+    --office-dark-2: #1F497D;
+    --office-light-2: #EEECE1;
+    --office-accent-1: #4F81BD;  /* Steel Blue */
+    --office-accent-2: #C0504D;  /* Muted Red */
+    --office-accent-3: #9BBB59;  /* Olive Green */
+    --office-accent-4: #8064A2;  /* Purple */
+    --office-accent-5: #4BACC6;  /* Cyan */
+    --office-accent-6: #F79646;  /* Orange */
+    --office-hyperlink: #0000FF;
+    --office-followed-link: #800080;
+}
+
+/* Main App Container */
+.stApp {
+    background-color: var(--office-light-1);
+}
+
+/* Sidebar Styling */
+.css-1d391kg, [data-testid="stSidebar"] {
+    background-color: var(--office-light-2) !important;
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: var(--office-dark-2) !important;
+}
+
+/* Primary Buttons */
+.stButton > button[kind="primary"],
+.stButton > button[data-baseweb="button"][kind="primary"] {
+    background-color: var(--office-accent-1) !important;
+    border-color: var(--office-accent-1) !important;
+    color: var(--office-light-1) !important;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background-color: var(--office-dark-2) !important;
+    border-color: var(--office-dark-2) !important;
+}
+
+/* Secondary Buttons */
+.stButton > button {
+    border-color: var(--office-accent-1) !important;
+    color: var(--office-accent-1) !important;
+}
+
+.stButton > button:hover {
+    background-color: var(--office-light-2) !important;
+    border-color: var(--office-dark-2) !important;
+    color: var(--office-dark-2) !important;
+}
+
+/* Danger/Warning Buttons */
+button:contains("Delete"),
+button:contains("RESET"),
+button:contains("⚠️") {
+    background-color: var(--office-accent-2) !important;
+    color: var(--office-light-1) !important;
+    border-color: var(--office-accent-2) !important;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    background-color: var(--office-light-2);
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: var(--office-light-1);
+    border-radius: 4px;
+    color: var(--office-dark-2);
+    padding: 8px 16px;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: var(--office-accent-1) !important;
+    color: var(--office-light-1) !important;
+}
+
+/* Chat Messages */
+.stChatMessage {
+    background-color: var(--office-light-2) !important;
+    border-left: 4px solid var(--office-accent-1);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.stChatMessage[data-testid="user-message"] {
+    border-left-color: var(--office-accent-5);
+}
+
+.stChatMessage[data-testid="assistant-message"] {
+    border-left-color: var(--office-accent-1);
+}
+
+/* Expanders (Citations) */
+.streamlit-expanderHeader {
+    background-color: var(--office-light-2) !important;
+    color: var(--office-dark-2) !important;
+    border-left: 3px solid var(--office-accent-3);
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.streamlit-expanderHeader:hover {
+    background-color: var(--office-accent-1) !important;
+    color: var(--office-light-1) !important;
+}
+
+/* Text Input */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea {
+    border-color: var(--office-accent-1) !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: var(--office-dark-2) !important;
+    box-shadow: 0 0 0 2px rgba(79, 129, 189, 0.2);
+}
+
+/* Select Boxes */
+.stSelectbox > div > div {
+    border-color: var(--office-accent-1) !important;
+}
+
+/* File Uploader */
+.stFileUploader {
+    border: 2px dashed var(--office-accent-1) !important;
+    border-radius: 8px;
+}
+
+/* Success Messages */
+.stSuccess {
+    background-color: var(--office-accent-3) !important;
+    color: var(--office-light-1) !important;
+}
+
+/* Error Messages */
+.stError {
+    background-color: var(--office-accent-2) !important;
+    color: var(--office-light-1) !important;
+}
+
+/* Info Messages */
+.stInfo {
+    background-color: var(--office-accent-5) !important;
+    color: var(--office-light-1) !important;
+}
+
+/* Warning Messages */
+.stWarning {
+    background-color: var(--office-accent-6) !important;
+    color: var(--office-dark-1) !important;
+}
+
+/* Divider */
+hr {
+    border-color: var(--office-accent-1) !important;
+}
+
+/* Links */
+a {
+    color: var(--office-hyperlink) !important;
+}
+
+a:visited {
+    color: var(--office-followed-link) !important;
+}
+
+a:hover {
+    color: var(--office-accent-1) !important;
+}
+
+/* Spinner */
+.stSpinner > div {
+    border-top-color: var(--office-accent-1) !important;
+}
+
+/* Chat Input */
+.stChatInput > div > div > textarea {
+    border-color: var(--office-accent-1) !important;
+}
+
+.stChatInput > div > div > textarea:focus {
+    border-color: var(--office-dark-2) !important;
+    box-shadow: 0 0 0 2px rgba(79, 129, 189, 0.2);
+}

@@ -1,0 +1,271 @@
+/* Elvix "Dark Mode" Theme - Based on extracted PPT colors */
+
+:root {
+    /* --- Core Structure (Dark Mode Inverted) --- */
+    /* Main Background: Dark Gray/Black (replaces White) */
+    --office-light-1: #0E1117;
+    /* Secondary Background: Lighter Gray for Sidebar/Cards (replaces Beige) */
+    --office-light-2: #262730;
+    /* Main Text: White (replaces Black) */
+    --office-dark-1: #FAFAFA;
+    /* Secondary Text/Borders: Light Gray */
+    --office-dark-2: #E0E0E0;
+
+    /* --- Elvix Brand Identity (Preserved from PPT) --- */
+    /* Primary Blue: Used for User Icons & Flow */
+    --office-accent-1: #4F81BD;
+    /* Steel Blue - Kept original, works on dark */
+    /* Alert Red: Used for Errors */
+    --office-accent-2: #C0504D;
+    /* Muted Red */
+    /* Success Green: Used for Validation/Search */
+    --office-accent-3: #9BBB59;
+    /* Olive Green */
+    /* Backend Purple: Used for Architecture/Storage */
+    --office-accent-4: #8064A2;
+    /* Purple */
+    /* Info Cyan: Used for highlights */
+    --office-accent-5: #4BACC6;
+    /* Cyan */
+    /* Web Orange: Used for Internet/Security */
+    --office-accent-6: #F79646;
+    /* Orange */
+
+    /* Links */
+    --office-hyperlink: #88C0D0;
+    /* Brightened for dark mode visibility */
+    --office-followed-link: #B48EAD;
+}
+
+/* Main App Container */
+.stApp {
+    background-color: var(--office-light-1);
+    color: var(--office-dark-1);
+}
+
+/* Sidebar Styling */
+[data-testid="stSidebar"] {
+    background-color: var(--office-light-2) !important;
+    border-right: 1px solid #363B47;
+}
+
+/* Headers - Using the Elvix Blue for identity */
+h1,
+h2,
+h3 {
+    color: var(--office-accent-1) !important;
+    /* Changed from dark-2 to accent-1 for contrast */
+}
+
+h4,
+h5,
+h6 {
+    color: var(--office-dark-1) !important;
+}
+
+/* Primary Buttons (The "Elvix Blue") */
+.stButton>button[kind="primary"],
+.stButton>button[data-baseweb="button"][kind="primary"] {
+    background-color: var(--office-accent-1) !important;
+    border: 1px solid var(--office-accent-1) !important;
+    color: #FFFFFF !important;
+    /* Always white text on primary button */
+    transition: all 0.3s ease;
+}
+
+.stButton>button[kind="primary"]:hover {
+    background-color: #3a608f !important;
+    /* Slightly darker blue on hover */
+    border-color: #3a608f !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Secondary Buttons (Outlined) */
+.stButton>button[kind="secondary"] {
+    background-color: transparent !important;
+    border: 1px solid var(--office-accent-1) !important;
+    color: var(--office-accent-1) !important;
+}
+
+.stButton>button[kind="secondary"]:hover {
+    background-color: rgba(79, 129, 189, 0.1) !important;
+    /* Subtle blue tint */
+    border-color: var(--office-accent-5) !important;
+    /* Cyan glow on hover */
+    color: var(--office-accent-5) !important;
+}
+
+/* Danger/Warning Buttons */
+button:contains("Delete"),
+button:contains("RESET"),
+button:contains("⚠️") {
+    background-color: rgba(192, 80, 77, 0.15) !important;
+    /* Transparent Red */
+    color: #FF6B6B !important;
+    /* Brighter Red for dark mode */
+    border: 1px solid var(--office-accent-2) !important;
+}
+
+button:contains("Delete"):hover,
+button:contains("RESET"):hover {
+    background-color: var(--office-accent-2) !important;
+    color: white !important;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    background-color: var(--office-light-2);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: transparent;
+    border-radius: 4px;
+    color: var(--office-dark-2);
+    /* Light Gray Text */
+    border: none;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: var(--office-accent-4) !important;
+    /* Using Elvix Purple for active tab */
+    color: #FFFFFF !important;
+}
+
+/* Chat Messages */
+.stChatMessage {
+    background-color: var(--office-light-2) !important;
+    border: 1px solid #363B47;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+/* User Message: Uses the Elvix Blue/Cyan Identity */
+.stChatMessage[data-testid="user-message"] {
+    border-left: 4px solid var(--office-accent-5);
+    /* Cyan */
+    background-color: rgba(75, 172, 198, 0.05) !important;
+    /* Very faint cyan tint */
+}
+
+/* Assistant Message: Uses the Elvix Blue/Purple Identity */
+.stChatMessage[data-testid="assistant-message"] {
+    border-left: 4px solid var(--office-accent-1);
+    /* Steel Blue */
+}
+
+/* Expanders (Citations & Metadata) */
+.streamlit-expanderHeader {
+    background-color: var(--office-light-2) !important;
+    color: var(--office-dark-1) !important;
+    border: 1px solid #363B47;
+    border-left: 3px solid var(--office-accent-3);
+    /* Green Accent for Data/Facts */
+    border-radius: 4px;
+}
+
+.streamlit-expanderHeader:hover {
+    background-color: #30333D !important;
+    color: var(--office-accent-3) !important;
+}
+
+/* Text Inputs & Text Areas */
+.stTextInput>div>div>input,
+.stTextArea>div>div>textarea,
+.stSelectbox>div>div {
+    background-color: #1A1C24 !important;
+    /* Darker than sidebar */
+    color: var(--office-dark-1) !important;
+    border-color: #4A4E5A !important;
+}
+
+.stTextInput>div>div>input:focus,
+.stTextArea>div>div>textarea:focus {
+    border-color: var(--office-accent-1) !important;
+    /* Blue Focus */
+    box-shadow: 0 0 0 1px var(--office-accent-1);
+}
+
+/* File Uploader - Dashed Blue Border */
+.stFileUploader section {
+    background-color: rgba(79, 129, 189, 0.05);
+    border: 2px dashed var(--office-accent-1) !important;
+}
+
+.stFileUploader section:hover {
+    background-color: rgba(79, 129, 189, 0.1);
+}
+
+/* Status Messages (Alerts) */
+/* Success: Green */
+.stSuccess {
+    background-color: rgba(155, 187, 89, 0.1) !important;
+    border-left: 4px solid var(--office-accent-3) !important;
+    color: #E2F0D9 !important;
+}
+
+/* Error: Red */
+.stError {
+    background-color: rgba(192, 80, 77, 0.1) !important;
+    border-left: 4px solid var(--office-accent-2) !important;
+    color: #FFCDCD !important;
+}
+
+/* Info: Cyan */
+.stInfo {
+    background-color: rgba(75, 172, 198, 0.1) !important;
+    border-left: 4px solid var(--office-accent-5) !important;
+    color: #D3F2F8 !important;
+}
+
+/* Warning: Orange */
+.stWarning {
+    background-color: rgba(247, 150, 70, 0.1) !important;
+    border-left: 4px solid var(--office-accent-6) !important;
+    color: #FFE6CC !important;
+}
+
+/* Divider */
+hr {
+    border-color: #363B47 !important;
+}
+
+/* JSON / Code Blocks */
+code {
+    background-color: #000000 !important;
+    color: var(--office-accent-3) !important;
+    /* Green text for code/JSON */
+}
+
+/* Spinner */
+.stSpinner>i {
+    border-color: var(--office-accent-1) !important;
+}
+
+/* Links */
+a {
+    color: var(--office-hyperlink) !important;
+}
+
+a:visited {
+    color: var(--office-followed-link) !important;
+}
+
+a:hover {
+    color: var(--office-accent-1) !important;
+}
+
+/* Chat Input */
+.stChatInput>div>div>textarea {
+    background-color: #1A1C24 !important;
+    color: var(--office-dark-1) !important;
+    border-color: #4A4E5A !important;
+}
+
+.stChatInput>div>div>textarea:focus {
+    border-color: var(--office-accent-1) !important;
+    box-shadow: 0 0 0 1px var(--office-accent-1);
+}

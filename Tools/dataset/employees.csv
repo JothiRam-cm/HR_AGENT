@@ -1,0 +1,4 @@
+employee_id,name,department,salary,bonus,join_date
+101,Alice Smith,HR,75000,5000,2022-01-15
+102,Bob Johnson,Engineering,95000,8000,2021-06-20
+103,Charlie Brown,Sales,80000,10000,2023-03-10
