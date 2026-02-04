@@ -1,5 +1,0 @@
-- [x] Update `config.py` to use `d:\projects\Tools\dataset` <!-- id: 0 -->
-- [x] Fix `ingest.py` imports (`langchain_text_splitters`) <!-- id: 1 -->
-- [x] Update `ingest.py` to handle multiple PDF files in directory <!-- id: 2 -->
-- [x] Run `ingest.py` to rebuild vector store <!-- id: 3 -->
-- [ ] Verify <!-- id: 4 -->
